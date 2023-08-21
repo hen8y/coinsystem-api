@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('histories', function (Blueprint $table) {
+            $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('amount');
             $table->string('type');
